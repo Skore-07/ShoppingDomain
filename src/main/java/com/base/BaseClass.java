@@ -24,7 +24,7 @@ public class BaseClass {
     {
 		 FileInputStream file=null;;
 			try {
-				File src = new File("C:\\Users\\kolek\\git\\BankingFramework\\src\\main\\resources\\properties\\config.properties");
+				File src = new File("C:\\Users\\Suraj\\eclipse-workspace\\ShoppingDemo\\src\\main\\resources\\property\\config.properties");
 				file = new FileInputStream( src);
 			} catch (FileNotFoundException e) {
 				
