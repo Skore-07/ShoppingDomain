@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.utility.Utility;
@@ -14,9 +15,6 @@ import com.utility.Utility;
 public class BaseClass {
 	public static WebDriver driver;
 	public static Properties prop;
-	
-	
-	
 	
 	public static void launchTheWeb()
 	
@@ -39,7 +37,7 @@ public class BaseClass {
 			}   // load properties file
 	
     	
-    	driver= new FirefoxDriver();
+    	driver= new ChromeDriver();
     	
     	driver.manage().window().maximize();
     	Utility.implicit_Wait();

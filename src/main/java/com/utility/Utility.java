@@ -1,9 +1,14 @@
 package com.utility;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 import com.base.BaseClass;
 
@@ -15,7 +20,7 @@ public class Utility extends BaseClass
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		}
 		
-		public Sheet read_Excel(String sheetName)
+		public Sheet read_Excel(String sheetName) throws EncryptedDocumentException, IOException
 		{
 			FileInputStream fis=new FileInputStream("C:\\Users\\Suraj\\eclipse-workspace\\ShoppingDemo\\src\\main\\resources\\Data\\ORANGE_HRM.xlsx");
 			
